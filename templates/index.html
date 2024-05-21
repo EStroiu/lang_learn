@@ -6,36 +6,39 @@
     <title>Ollama Chat</title>
     <!-- Materialize CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
-        }
-        main {
-            flex: 1 0 auto;
-        }
-    </style>
+    <!-- Materialize Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
-<body>
+<body class="d-flex min-vh-100 flex-column">
     <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo center">Ollama Chat</a>
+        <div class="nav-wrapper indigo darken-4">
+            <a href="#" class="brand-logo center text-decoration-none text-reset ">Ollama Chat</a>
         </div>
     </nav>
-    <main class="container">
-        <h1>Ollama Chat</h1>
-        <form id="chat-form">
-            <div class="input-field">
-                <input type="text" id="question" name="question">
+    <main class="container mt-4">
+        <form id="chat-form" class="mb-4 row">
+            <div class="input-field col s10">
+                <textarea id="question" name="question" class="materialize-textarea" maxlength="500"></textarea>
                 <label for="question">Ask a question:</label>
             </div>
-            <button class="btn waves-effect waves-light" type="submit">Submit</button>
+            <div class="input-field right">
+                <button class="btn waves-effect waves-light" type="submit">
+                    <i class="material-icons">send</i>
+                </button>
+            </div>
         </form>
         <div id="answer" class="card-panel teal lighten-4"></div>
     </main>
     <!-- Materialize JS and dependencies -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="/static/bundle.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            M.textareaAutoResize(document.querySelector('#question'));
+        });
+    </script>
+
 </body>
 </html>
