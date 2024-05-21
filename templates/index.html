@@ -13,13 +13,13 @@
 <body class="d-flex min-vh-100 flex-column">
     <nav>
         <div class="nav-wrapper indigo darken-4">
-            <a href="#" class="brand-logo center text-decoration-none text-reset ">Ollama Chat</a>
+            <a href="#" class="brand-logo center text-decoration-none text-reset">Ollama Chat</a>
         </div>
     </nav>
     <main class="container mt-4">
         <form id="chat-form" class="mb-4 row">
             <div class="input-field col s10">
-                <textarea id="question" name="question" class="materialize-textarea" maxlength="500"></textarea>
+                <input type="text" id="question" name="question" class="validate">
                 <label for="question">Ask a question:</label>
             </div>
             <div class="input-field right">
@@ -33,12 +33,5 @@
     <!-- Materialize JS and dependencies -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="/static/bundle.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            M.textareaAutoResize(document.querySelector('#question'));
-        });
-    </script>
-
 </body>
 </html>
