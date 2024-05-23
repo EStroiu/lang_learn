@@ -8,27 +8,42 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <!-- Materialize Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
 
+        
+    </style>
 </head>
 <body class="d-flex min-vh-100 flex-column">
     <nav>
         <div class="nav-wrapper indigo darken-4">
-            <a href="#" class="brand-logo center text-decoration-none text-reset">Ollama Chat</a>
+            <a href="#" class="brand-logo center text-decoration-none text-reset">Dutch Tutor 2000</a>
         </div>
     </nav>
     <main class="container mt-4">
         <form id="chat-form" class="mb-4 row">
             <div class="input-field col s10">
-                <input type="text" id="question" name="question" class="validate">
+                <input type="text" id="question" name="question" class="validate" maxlength="500">
                 <label for="question">Ask a question:</label>
             </div>
-            <div class="input-field right">
+            <div class="input-field col s2">
                 <button class="btn waves-effect waves-light" type="submit">
                     <i class="material-icons">send</i>
                 </button>
             </div>
         </form>
         <div id="answer" class="card-panel teal lighten-4"></div>
+        <form id="note-form" class="mb-4 row">
+            <div class="input-field col s10">
+                <textarea id="note-content" name="content" class="materialize-textarea validate" maxlength="500"></textarea>
+                <label for="note-content">Write a note:</label>
+            </div>
+            <div class="input-field col s2">
+                <button class="btn waves-effect waves-light" type="submit">
+                    <i class="material-icons">note_add</i>
+                </button>
+            </div>
+        </form>
+        <div id="notes" class="collection"></div>
     </main>
     <!-- Materialize JS and dependencies -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
