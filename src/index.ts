@@ -8,21 +8,27 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 const notesDiv = document.querySelector('#notes') as HTMLDivElement;
                 notesDiv.innerHTML = ''; 
-                data.notes.forEach((note: [number, string]) => {
+                data.notes.forEach((note: [number, string, string]) => {
                     const noteElement = document.createElement('div');
+
+                    const date = document.createElement('small');
+                    date.textContent = note[2]; 
+                    date.classList.add('note-date', 'browser-default');
+                    noteElement.appendChild(date);
+
                     noteElement.classList.add('collection-item', 'position-relative', 'row'); 
                     
                     const content = document.createElement('span');
                     content.textContent = note[1]; 
-                    content.classList.add('s10')
+                    content.classList.add();
                     noteElement.appendChild(content);
-                    
+
                     const deleteButton = document.createElement('button');
                     deleteButton.innerHTML = '<i class="material-icons">delete</i>'; 
-                    deleteButton.classList.add('btn', 'waves-effect', 'waves-light', 'red', 'delete-btn', 'right', 's2'); // Positioning classes
+                    deleteButton.classList.add('btn', 'waves-effect', 'waves-light', 'red', 'delete-btn', 'right'); 
                     deleteButton.onclick = () => confirmDelete(note[0]); 
                     noteElement.appendChild(deleteButton);
-                    
+
                     notesDiv.appendChild(noteElement);
                 });
             });
@@ -122,7 +128,4 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error:', error);
         }
     }
-
-    
-
 });

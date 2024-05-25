@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+from datetime import datetime
 import sqlite3
 import ollama
 
@@ -7,9 +8,13 @@ app = Flask(__name__, static_folder='static')
 def init_db():
     conn = sqlite3.connect('notes.db')
     cursor = conn.cursor()
-    cursor.execute('''CREATE TABLE IF NOT EXISTS notes (id INTEGER PRIMARY KEY, content TEXT)''')
+    cursor.execute('''CREATE TABLE IF NOT EXISTS notes (
+                        id INTEGER PRIMARY KEY, 
+                        content TEXT,
+                        date TEXT)''')
     conn.commit()
     conn.close()
+
 
 init_db()
 
@@ -28,9 +33,10 @@ def chat():
 @app.route('/notes', methods=['POST'])
 def add_note():
     content = request.form['content']
+    date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')  # Get the current date and time
     conn = sqlite3.connect('notes.db')
     cursor = conn.cursor()
-    cursor.execute('INSERT INTO notes (content) VALUES (?)', (content,))
+    cursor.execute('INSERT INTO notes (content, date) VALUES (?, ?)', (content, date))
     conn.commit()
     conn.close()
     return jsonify({'status': 'success'}), 201
@@ -39,7 +45,7 @@ def add_note():
 def get_notes():
     conn = sqlite3.connect('notes.db')
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM notes')
+    cursor.execute('SELECT id, content, date FROM notes')
     notes = cursor.fetchall()
     conn.close()
     return jsonify({'notes': notes})
