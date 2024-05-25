@@ -5,6 +5,7 @@ Virtual language tutor that uses AI to help users pratice their language skills.
 1. Currently suppored languages: Dutch
 2. Take notes and store them locally with the help of sqlite
 3. The application is hosted using Flask with browser Web UI so it is easily modifiable
+4. Editable text for notes with the help of quill.js
 
 # AI Behind the Tutor
 The model is accessed with [Ollama Python API](https://github.com/ollama/ollama-python), and the model used for Dutch tutor is [GEITje](https://github.com/Rijgersberg/GEITje). The model is run locally, so all your converstions with the tutor are private. However, that means that Ollam and the desired model needs to be installed and run on a local machine or AI Server.
