@@ -1,6 +1,23 @@
+import Quill from 'quill';
+import 'quill/dist/quill.snow.css';
+
 document.addEventListener('DOMContentLoaded', function() {
     const chatForm = document.querySelector('#chat-form') as HTMLFormElement;
     const noteForm = document.querySelector('#note-form') as HTMLFormElement;
+
+    // Initialize Quill editor
+    const quill = new Quill('#editor-container', {
+        theme: 'snow',
+        placeholder: 'Write your note here...',
+        modules: {
+            toolbar: [
+                [{ header: [1, 2, false] }],
+                ['bold', 'italic', 'underline'],
+                ['link', 'blockquote', 'code-block'],
+                [{ list: 'ordered' }, { list: 'bullet' }]
+            ]
+        }
+    });
 
     function loadNotes() {
         fetch('/notes')
@@ -10,18 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 notesDiv.innerHTML = ''; 
                 data.notes.forEach((note: [number, string, string]) => {
                     const noteElement = document.createElement('div');
+                    noteElement.classList.add('collection-item', 'position-relative');
 
                     const date = document.createElement('small');
                     date.textContent = note[2]; 
-                    date.classList.add('note-date', 'browser-default');
+                    date.classList.add('note-date');
                     noteElement.appendChild(date);
-
-                    noteElement.classList.add('collection-item', 'position-relative', 'row'); 
-                    
-                    const content = document.createElement('span');
-                    content.textContent = note[1]; 
-                    content.classList.add();
-                    noteElement.appendChild(content);
 
                     const deleteButton = document.createElement('button');
                     deleteButton.innerHTML = '<i class="material-icons">delete</i>'; 
@@ -29,7 +40,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     deleteButton.onclick = () => confirmDelete(note[0]); 
                     noteElement.appendChild(deleteButton);
 
-                    notesDiv.appendChild(noteElement);
+                    const content = document.createElement('div');
+                    content.innerHTML = note[1]; // Insert the HTML content from Quill
+                    content.classList.add();
+                    noteElement.appendChild(content);
+
+                    notesDiv.insertBefore(noteElement, notesDiv.firstChild); // Add new notes to the top
                 });
             });
     }
@@ -74,11 +90,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     noteForm.addEventListener('submit', async (event) => {
         event.preventDefault();
-        const input = document.querySelector('#note-content') as HTMLTextAreaElement;
+        const content = quill.root.innerHTML; 
         const submitButton = noteForm.querySelector('button[type="submit"]') as HTMLButtonElement;
-        const notesDiv = document.querySelector('#notes') as HTMLDivElement;
 
-        input.disabled = true;
         submitButton.disabled = true;
 
         try {
@@ -88,13 +102,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 body: new URLSearchParams({
-                    content: input.value,
+                    content: content,
                 }),
             });
 
             if (response.ok) {
-                input.value = ''; 
-                M.textareaAutoResize(input);
+                quill.setText(''); 
                 loadNotes(); 
             } else {
                 console.error('Error:', response.statusText);
@@ -102,7 +115,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } catch (error) {
             console.error('Error:', error);
         } finally {
-            input.disabled = false;
             submitButton.disabled = false;
         }
     });

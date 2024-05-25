@@ -8,6 +8,16 @@ module.exports = {
                 test: /\.ts$/,
                 use: 'ts-loader',
                 exclude: /node_modules/
+            },
+            {
+                test: /\.css$/, // Add this rule
+                use: ['style-loader', 'css-loader'],
+                exclude: /node_modules/
+            },
+            {
+                test: /\.css$/, // Add this rule
+                use: ['style-loader', 'css-loader'],
+                include: /node_modules/
             }
         ]
     },
