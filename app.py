@@ -26,7 +26,7 @@ def home():
 def chat():
     if request.method == 'POST':
         question = request.form['question']
-        response = ollama.chat(model='GEITje-7B-chat-v2', messages=[{'role': 'user', 'content': question}])
+        response = ollama.chat(model='bramvanroy/fietje-2b-chat:f16', messages=[{'role': 'user', 'content': question}])
         answer = response['message']['content']
         return jsonify({'answer': answer})
 
