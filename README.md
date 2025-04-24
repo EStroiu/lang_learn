@@ -37,7 +37,7 @@ After setup, start the web app:
 
 ```bash
 # Activate virtual environment
-. .venv/bin/activate   # on Windows use `.venv\\Scripts\\activate`
+source .venv/bin/activate   # on Windows use `.venv\\Scripts\\activate`
 
 # Run the Flask app directly
 python app.py           # serves API on http://127.0.0.1:5000 by default
