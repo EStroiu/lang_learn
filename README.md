@@ -1,11 +1,81 @@
 # Lang Learn - Language Tutor
-Virtual language tutor that uses AI to help users pratice their language skills. The idea behind the tool is to emulate behavior between student and tutor, which is different from group oriented studying. Those who prefere one-on-one interactions can benifit a lot from this.
 
-# Features
-1. Currently suppored languages: Dutch
-2. Take notes and store them locally with the help of sqlite
-3. The application is hosted using Flask with browser Web UI so it is easily modifiable
-4. Editable text for notes with the help of quill.js
+Virtual language tutor that uses AI to help users practice their language skills. The idea behind the tool is to emulate a one-on-one conversation between student and tutor, which differs from group‑oriented studying. Those who prefer individual interaction can benefit greatly from this approach.
 
-# AI Behind the Tutor
-The model is accessed with [Ollama Python API](https://github.com/ollama/ollama-python), and the model used for Dutch tutor is [GEITje](https://github.com/Rijgersberg/GEITje). The model is run locally, so all your converstions with the tutor are private. However, that means that Ollam and the desired model needs to be installed and run on a local machine or AI Server.
+## Features
+
+1. Currently supported languages: Dutch
+2. Take notes and store them locally using SQLite
+3. Web application hosted with Flask for easy customization
+4. Rich text editing for notes powered by Quill.js
+
+## Prerequisites
+
+Ensure you have the following installed on your system:
+
+- Python 3.8 or newer
+- Node.js and npm
+- GNU Make
+
+## Setup
+
+From the project root, run:
+
+```bash
+make          # Installs both web dependencies and Python environment
+```
+
+This invokes the `Makefile` to:
+
+1. Install web dependencies (`npm install`)
+2. Create and activate a Python virtual environment (`.venv`)
+3. Upgrade pip and install Python packages from `requirements.txt`
+
+## Running the Application
+
+After setup, start the backend and frontend:
+
+### Backend
+
+```bash
+# Activate virtual environment
+. .venv/bin/activate   # on Windows use `.venv\\Scripts\\activate`
+
+# Run the Flask app directly
+python app.py           # serves API on http://127.0.0.1:5000 by default
+```
+
+### Frontend
+
+```bash
+npm start               # starts dev server on http://localhost:3000 by default
+```
+
+Open your browser at http://localhost:3000 to interact with the tutor interface. The frontend will communicate with the backend API on port 5000.
+
+## Configuration
+
+The AI model is accessed through the Ollama Python API and can be swapped out or configured by pointing to your locally running model instance. By default, the application looks for the Ollama endpoint at `http://localhost:11434`.
+
+To change the model or its settings, update the relevant variables in the configuration file or environment variables before launching the application.
+
+## Data Storage
+
+All user notes and session data are stored in a local SQLite database file (`notes.db` by default). You can find this file in the project root. To reset your data, delete or rename this file before starting the application.
+
+## Cleaning Up
+
+To remove installed dependencies and start fresh:
+
+```bash
+make clean   # removes virtualenv and node_modules, package-lock.json
+```
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome. Feel free to open a pull request or submit an issue on the repository.
+
+---
+
+*Happy language learning!*
+
