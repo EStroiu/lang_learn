@@ -1,0 +1,7 @@
+[
+    { "source": "Ik ga gisteren naar de winkel.", "reference": "Ik ben gisteren naar de winkel gegaan." },
+    { "source": "Hij hebben een boek gelezen.", "reference": "Hij heeft een boek gelezen." },
+    { "source": "Wij speelten voetbal in het park.", "reference": "Wij speelden voetbal in het park." },
+    { "source": "Zij eet een appelen.", "reference": "Zij eet een appel." },
+    { "source": "Jij loopt snel rennen.", "reference": "Jij rent snel." }
+]

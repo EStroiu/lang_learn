@@ -1,0 +1,7 @@
+[
+    { "source": "Goedenavond, hoe is 't?", "reference": "Goedenavond, hoe is het?" },
+    { "source": "Ik ga weer naar huis.", "reference": "Ik ga weer naar huis." },
+    { "source": "De jongen heeft honger.", "reference": "De jongen heeft honger." },
+    { "source": "Ik zei dat niet tegen hem.", "reference": "Ik zei dat niet tegen hem." },
+    { "source": "Je gaat dat zien.", "reference": "Je gaat dat zien." }
+]

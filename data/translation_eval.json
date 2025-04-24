@@ -1,0 +1,7 @@
+[
+    { "source": "How do you say \"I love programming\" in Dutch? Answer in a single sentence.", "reference": "Ik hou van programmeren." },
+    { "source": "Translate: \"Good morning, how are you?\" Answer in a single sentence.", "reference": "Goedemorgen, hoe gaat het met je?" },
+    { "source": "What is the Dutch for \"See you later\"? Answer in a single sentence.", "reference": "Tot later." },
+    { "source": "Translate: \"I would like a cup of coffee.\" Answer in a single sentence.", "reference": "Ik wil graag een kopje koffie." },
+    { "source": "How do you say \"Thank you very much\" in Dutch? Answer in a single sentence.", "reference": "Hartelijk dank." }
+]
