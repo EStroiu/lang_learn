@@ -33,9 +33,7 @@ This invokes the `Makefile` to:
 
 ## Running the Application
 
-After setup, start the backend and frontend:
-
-### Backend
+After setup, start the web app:
 
 ```bash
 # Activate virtual environment
@@ -45,13 +43,6 @@ After setup, start the backend and frontend:
 python app.py           # serves API on http://127.0.0.1:5000 by default
 ```
 
-### Frontend
-
-```bash
-npm start               # starts dev server on http://localhost:3000 by default
-```
-
-Open your browser at http://localhost:3000 to interact with the tutor interface. The frontend will communicate with the backend API on port 5000.
 
 ## Configuration
 
