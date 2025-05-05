@@ -2,6 +2,9 @@
 
 Virtual language tutor that uses AI to help users practice their language skills. The idea behind the tool is to emulate a one-on-one conversation between student and tutor, which differs from group‑oriented studying. Those who prefer individual interaction can benefit greatly from this approach.
 
+![](screenshots/demo1.png?raw=true)
+![](screenshots/demo3.png?raw=true)
+
 ## Features
 
 1. Currently supported languages: Dutch
