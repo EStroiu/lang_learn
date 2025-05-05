@@ -1,0 +1,105 @@
+deel,taak,exercise_type,options_num,correct,topic
+1,1,woorden,2,incorrect,jezelf of iemand anders voorstellen
+1,1,woorden,2,correct,jezelf of iemand anders voorstellen
+1,1,woorden,2,incorrect,jezelf of iemand anders voorstellen
+1,1,woorden,2,correct,jezelf of iemand anders voorstellen
+1,1,woorden,2,correct,jezelf of iemand anders voorstellen
+1,1,woorden,2,correct,jezelf of iemand anders voorstellen
+1,1,woorden,2,correct,jezelf of iemand anders voorstellen
+1,1,woorden,2,correct,jezelf of iemand anders voorstellen
+1,1,woorden,2,correct,jezelf of iemand anders voorstellen
+1,1,woorden,2,correct,jezelf of iemand anders voorstellen
+1,1,woorden,2,correct,jezelf of iemand anders voorstellen
+1,1,woorden,2,correct,jezelf of iemand anders voorstellen
+1,1,woorden,2,incorrect,jezelf of iemand anders voorstellen
+1,1,woorden,2,correct,jezelf of iemand anders voorstellen
+1,1,woorden,2,incorrect,jezelf of iemand anders voorstellen
+1,1,woorden,2,incorrect,jezelf of iemand anders voorstellen
+1,1,woorden,3,correct,jezelf of iemand anders voorstellen
+1,oefenen,grammatica,4,correct,het subject
+1,oefenen,grammatica,4,correct,het subject
+1,oefenen,grammatica,4,incorrect,het subject
+1,oefenen,grammatica,3,correct,het subject
+1,oefenen,grammatica,3,correct,het subject
+1,oefenen,grammatica,2,incorrect,het subject
+1,oefenen,grammatica,2,incorrect,het subject
+1,oefenen,grammatica,2,correct,het subject
+2,4,woorden,2,correct, informatie vragen en geven op het gemeentehuis
+2,4,woorden,2,correct, informatie vragen en geven op het gemeentehuis
+2,4,woorden,2,correct, informatie vragen en geven op het gemeentehuis
+2,4,woorden,2,correct, informatie vragen en geven op het gemeentehuis
+2,3,woorden,2,correct,een bankrekening openen
+2,3,woorden,2,incorrect,een bankrekening openen
+2,3,woorden,2,correct,een bankrekening openen
+2,3,woorden,2,correct,een bankrekening openen
+2,oefenen,grammatica,2,correct,het futurum
+2,oefenen,grammatica,2,correct,het futurum
+2,oefenen,grammatica,2,correct,het futurum
+2,oefenen,grammatica,2,correct,het futurum
+2,oefenen,grammatica,2,correct,het futurum
+2,oefenen,grammatica,2,incorrect,het futurum
+2,oefenen,grammatica,2,correct,het futurum
+2,oefenen,grammatica,2,incorrect,het futurum
+2,oefenen,grammatica,2,incorrect,het futurum
+2,oefenen,grammatica,2,incorrect,het futurum
+2,oefenen,grammatica,open,correct,het futurum
+2,oefenen,grammatica,open,correct,het futurum
+2,oefenen,grammatica,open,incorrect,het futurum
+2,oefenen,grammatica,open,incorrect,het futurum
+2,oefenen,grammatica,open,correct,het futurum
+3,1,woorden,4,correct,een karakter beschrijven en beoordelen
+3,1,woorden,4,incorrect,een karakter beschrijven en beoordelen
+3,1,woorden,4,correct,een karakter beschrijven en beoordelen
+3,1,woorden,4,correct,een karakter beschrijven en beoordelen
+3,1,woorden,4,correct,een karakter beschrijven en beoordelen
+3,1,woorden,3,correct,een karakter beschrijven en beoordelen
+3,1,woorden,3,incorrect,een karakter beschrijven en beoordelen
+3,1,woorden,3,correct,een karakter beschrijven en beoordelen
+3,3,woorden,3,correct,ervaringen uitwisselen over de talen die je spreekt
+3,3,woorden,3,correct,ervaringen uitwisselen over de talen die je spreekt
+3,3,woorden,3,correct,ervaringen uitwisselen over de talen die je spreekt
+3,3,woorden,2,incorrect,ervaringen uitwisselen over de talen die je spreekt
+3,3,woorden,2,incorrect,ervaringen uitwisselen over de talen die je spreekt
+3,3,woorden,2,correct,ervaringen uitwisselen over de talen die je spreekt
+3,3,woorden,2,correct,ervaringen uitwisselen over de talen die je spreekt
+3,3,woorden,2,correct,ervaringen uitwisselen over de talen die je spreekt
+3,oefenen,grammatica,2,correct,de vorm van het (im)perfectum
+3,oefenen,grammatica,2,correct,de vorm van het (im)perfectum
+3,oefenen,grammatica,2,incorrect,de vorm van het (im)perfectum
+3,oefenen,grammatica,2,incorrect,de vorm van het (im)perfectum
+3,oefenen,grammatica,2,correct,de vorm van het (im)perfectum
+3,oefenen,grammatica,2,correct,de vorm van het (im)perfectum
+3,oefenen,grammatica,open,correct,de vorm van het (im)perfectum
+3,oefenen,grammatica,open,correct,de vorm van het (im)perfectum
+3,oefenen,grammatica,open,incorrect,de vorm van het (im)perfectum
+3,oefenen,grammatica,open,correct,de vorm van het (im)perfectum
+3,oefenen,grammatica,open,incorrect,de vorm van het (im)perfectum
+3,oefenen,grammatica,open,correct,de vorm van het (im)perfectum
+4,3,woorden,2,correct,Nederlands proza
+4,3,woorden,2,correct,Nederlands proza
+4,3,woorden,2,correct,Nederlands proza
+4,3,woorden,2,correct,Nederlands proza
+4,3,woorden,2,incorrect,Nederlands proza
+4,3,woorden,2,correct,Nederlands proza
+4,3,woorden,2,correct,Nederlands proza
+4,3,woorden,2,correct,Nederlands proza
+4,3,woorden,2,incorrect,Nederlands proza
+4,3,woorden,2,incorrect,Nederlands proza
+4,3,woorden,2,incorrect,Nederlands proza
+4,4,woorden,2,correct,Nederlandse poëzie
+4,4,woorden,2,incorrect,Nederlandse poëzie
+4,4,woorden,2,correct,Nederlandse poëzie
+4,4,woorden,2,correct,Nederlandse poëzie
+4,4,woorden,2,correct,Nederlandse poëzie
+4,oefenen,grammatica,2,incorrect,Het participium van het verbum met een prefix
+4,oefenen,grammatica,2,incorrect,Het participium van het verbum met een prefix
+4,oefenen,grammatica,2,correct,Het participium van het verbum met een prefix
+4,oefenen,grammatica,2,incorrect,Het participium van het verbum met een prefix
+4,oefenen,grammatica,2,correct,Het participium van het verbum met een prefix
+4,oefenen,grammatica,2,correct,Het participium van het verbum met een prefix
+4,oefenen,grammatica,2,correct,Het participium van het verbum met een prefix
+4,oefenen,grammatica,2,correct,Het participium van het verbum met een prefix
+4,oefenen,grammatica,2,correct,Het participium van het verbum met een prefix
+4,oefenen,grammatica,2,correct,Het participium van het verbum met een prefix
+4,oefenen,grammatica,2,incorrect,Het participium van het verbum met een prefix
+4,oefenen,grammatica,2,incorrect,Het participium van het verbum met een prefix
