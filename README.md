@@ -68,8 +68,3 @@ make clean   # removes virtualenv and node_modules, package-lock.json
 ## Contributing
 
 Contributions, issues, and feature requests are welcome. Feel free to open a pull request or submit an issue on the repository.
-
----
-
-*Happy language learning!*
-
